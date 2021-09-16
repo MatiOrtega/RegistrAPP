@@ -14,16 +14,16 @@
   <br>
   <ion-item>
     <ion-label>Nombre de usuario:</ion-label>
-    <ion-input type="text" placeholder="Juan"></ion-input>
+    <ion-input type="text" placeholder="Juan" #nombre></ion-input>
   </ion-item>
   <ion-item>
     <ion-label>Contraseña:</ion-label>
-    <ion-input type="password" placeholder="**********"></ion-input>
+    <ion-input type="password" placeholder="**********" #clave></ion-input>
   </ion-item>
   <br>
   <br>
   <br>
-  <ion-button  color="primary" expand="block" fill="solid" shape="round">
+  <ion-button (click)="validar(nombre, clave)" color="primary" expand="block" fill="solid" shape="round">
     Ingresar
   </ion-button>
   <ion-button color="primary" expand="block" fill="clear" shape="round">
