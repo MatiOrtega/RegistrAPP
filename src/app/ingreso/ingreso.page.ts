@@ -11,7 +11,8 @@ export class IngresoPage implements OnInit {
   validacion = String;
 
   constructor(
-    private alertControl: AlertController
+    private alertControl: AlertController,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -37,6 +38,11 @@ export class IngresoPage implements OnInit {
          message: "Por favor ingrese información en el campo contraseña"
        });
        await alerta.present();
+     }
+
+     else
+     {
+        this.router.navigate(['/home'])
      }
   }
 
